@@ -4,7 +4,6 @@ import pygame
 import sys
 import time
 import random
-from perlin_noise import PerlinNoise
 
 
 
@@ -39,7 +38,6 @@ clock = pygame.time.Clock()
 
 	# [pos, vel, timer, size, colour]
 particles = []
-pnoise = PerlinNoise(octaves = 10, seed = 1)
 mb_pressed = False
 
 
@@ -71,7 +69,7 @@ while True:
 		# -- Particle size
 	pt_size = random.randint(1,3)
 
-	# Check of mb pressed and resize the particles for the duration of the click
+	# Check if mb pressed and resize and recolour the particles for the duration of the click
 	if mb_pressed:
 		pt_size = random.randint(3,6)
 		timer = random.randint(5,7)
