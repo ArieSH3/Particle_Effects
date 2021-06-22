@@ -49,6 +49,7 @@ while True:
 	screen.fill(WHITE)
 
 	# -- Set particle colour
+	#pt_colour = random.choice((BLACK, BLUE, RED, GREEN, YELLOW)) # BLACK
 	pt_colour = BLACK
 	
 	# -- Set FPS
@@ -61,7 +62,7 @@ while True:
 
 		# -- Velocity
 	velocity_x = random.randint(0, 20) / 10 - 1
-	velocity_y = 0
+	velocity_y = 0 #-2
 
 		# -- Timer
 	timer = random.randint(4,6)
@@ -108,7 +109,7 @@ while True:
 		particle[3]    -= 0.05
 
 		# -- Draw particles															 #2
-		pygame.draw.circle(screen, particle[4], (particle[0][0], particle[0][1]), particle[3])
+		pygame.draw.circle(screen, particle[4], (particle[0][0], particle[0][1]), particle[3], 2)
 
 		# -- Remove particles
 		if particle[2] <= 0:
